@@ -1,0 +1,45 @@
+﻿<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<link href='styles.css' rel='stylesheet' />
+	
+	<title>Custom Paint</title>
+	
+	<script>
+	</script>
+</head>
+<body>
+	<div class='main-container'>
+		<div class='container'>
+			<canvas id='canvas-field' class='canvas-style'></canvas>
+			<div class='controls'>
+				<div class='buttons'>
+					<button id='save' type='button' class='button button-save' onclick=''>Save</button>
+					<button id='clear' type='button' class='button button-clear' onclick=''>Clear</button>
+				</div>
+				<div class='palette'>
+					<div class='button-palette palette-green selected-p' data-color='#5cb85c'></div>
+					<div class='button-palette palette-red' data-color='#d9534f'></div>
+					<div class='button-palette palette-orange' data-color='#f0ad4e'></div>
+					<div class='button-palette palette-blue' data-color='#337ab7'></div>
+					<div class='button-palette palette-gray' data-color='#777'></div>
+				</div>
+				<div class='thickness'>
+					<div class='button-thickness thickness-low selected-t' data-thickness='3.25'></div>
+					<div class='button-thickness thickness-middle' data-thickness='5.25'></div>
+					<div class='button-thickness thickness-high' data-thickness='7.25'></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src='script.js'></script>
+	<script>
+		var canvas = new Canvas();
+		var saveButton = document.getElementById('save');
+		var clearButton = document.getElementById('clear');
+		saveButton.onclick = canvas.SaveCanvas;
+		clearButton.onclick = canvas.ClearCanvas;
+	</script>
+</body>
+</html>
